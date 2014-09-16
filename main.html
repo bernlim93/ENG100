@@ -1,62 +1,117 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<link href="main.css" type="text/css" rel="stylesheet"/>
-	<title>UIUC ENG-100 Project</title>
+<title>Eventnest</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(event) {  
+  $('a[href^="#"]').on('click', function(event) {
+
+      var target = $( $(this).attr('href') );
+
+      if( target.length ) {
+          event.preventDefault();
+          $('html, body').animate({
+              scrollTop: target.offset().top
+          }, 1000);
+      }
+
+  });
+});
+</script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
 </head>
 
-<body>
-	<div class="Button">
-		<a href="#About" id="Button1"><h4>About</h4></a>
-		<a href="#Visuals" id="Button2"><h4>Visuals</h4></a>
-		<a href="#Team" id="Button3"><h4>Team</h4></a>
-		<p id="Name">Eng 100 Project (insert logo here?)</p>
-	</div>
+<body style="font-family:Verdana;" onLoad="MM_preloadImages('http://pds27.egloos.com/pds/201409/15/54/b0208254_541676311863d.png','http://pds27.egloos.com/pds/201409/15/54/b0208254_5416747b903ef.png','http://pds21.egloos.com/pds/201409/15/54/b0208254_5416747cca987.png')">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr style="position:fixed;left:0;top:0">
+    <th width="150" height="113" rowspan="2" scope="col"><img src="http://pds25.egloos.com/pds/201409/15/54/b0208254_541674062b83e.png"></th>
+    <th width="584" height="113" rowspan="2" scope="col"><img src="http://web.engr.illinois.edu/~blim7/logo3.png"></th>
+    <th height="113" colspan="2" scope="col"><img src="http://pds26.egloos.com/pds/201409/15/54/b0208254_5416740bb501c.png" style="height: 100%;"></th>
+  </tr>
 
-	<br></br>
-	<br></br>
-	<br></br>
-	<img src="http://goo.gl/XhVCEL"/>
-	<img src="http://goo.gl/XhVCEL"/>
-	<img src="http://goo.gl/XhVCEL"/>
-	<br></br>
-	<img src="http://goo.gl/XhVCEL"/>
-	<img src="http://goo.gl/XhVCEL"/>
-	<img src="http://goo.gl/XhVCEL"/>
+  <tr style="position:fixed;right:20px;top:50px">
+    <td><a href="#About" id="Aboutclick" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','http://pds27.egloos.com/pds/201409/15/54/b0208254_541676311863d.png',1)"><img name="Image7" border="0" src="http://pds21.egloos.com/pds/201409/15/54/b0208254_5416740d272be.png"></a></td>
+    
+    <td><a href="#Visuals" id="Visualsclick" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','http://pds27.egloos.com/pds/201409/15/54/b0208254_5416747b903ef.png',1)"><img name="Image5" border="0" src="http://pds27.egloos.com/pds/201409/15/54/b0208254_5416740f64f03.png"></a></td>
+    
+    <td><a href="#Team" id="Teamclick" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','http://pds21.egloos.com/pds/201409/15/54/b0208254_5416747cca987.png',1)"><img name="Image6" border="0" src="http://pds21.egloos.com/pds/201409/15/54/b0208254_54167411ad436.png"></a></td>
+  </tr>
 
-	<div id="About">
-		<p>This part is about content regarding the application</p>
-		<p>This part is about content regarding the application</p>
-		<p>This part is about content regarding the application</p>
-		<p>This part is about content regarding the application</p>
-		<p>This part is about content regarding the application</p>
-	</div>
-	<!--Hi there -->
-	<br></br>
-	<img src="http://goo.gl/XhVCEL"/>
-	<img src="http://goo.gl/XhVCEL"/>
-	<img src="http://goo.gl/XhVCEL"/>
-	
-	<div id="Visuals">
-		<p>This part is about Visuals/images of the application</p>
-		<p>This part is about Visuals/images of the application</p>
-		<p>This part is about Visuals/images of the application</p>
-		<p>This part is about Visuals/images of the application</p>
-		<p>This part is about Visuals/images of the application</p>
-		<p>This part is about Visuals/images of the application</p>
-		<p>This part is about Visuals/images of the application</p>
-	</div>
+  <tr>
+    <td>
+      <div id="About">
+        <br><br><br><br><br><br>
+        <div id="lay1">
+          <img src="http://web.engr.illinois.edu/~blim7/layout.jpg">
+        </div>
+        <div id="lay2">
+          <img src="http://web.engr.illinois.edu/~blim7/layout2.jpg">
+        </div>
+      </div>
+      <script>
+      $('img[src^="http"]').click(function() {
+        $( "#About" ).toggle( "slide" );
+      });
+      </script>
+      
+      <div id="Visuals">
+        <br><br><br><br><br><br>
+        <p><font size="7">Visuals</font></p>
+        <img src="http://web.engr.illinois.edu/~blim7/draft1.jpg"/>
+        <img src="http://web.engr.illinois.edu/~blim7/sketch1.jpg"/>
+        <img src="http://web.engr.illinois.edu/~blim7/sketch2.jpg"/>
+      </div>
 
-	<br></br>
-	<img src="http://goo.gl/XhVCEL"/>
-	<img src="http://goo.gl/XhVCEL"/>
-	<img src="http://goo.gl/XhVCEL"/>
-
-	<div id="Team">
-		<p>This part is about information of the team members</p>
-		<p>Bernard Lim: Info (include contact info?)</p>
-		<p>Shailpik Roy: Info (include contact info?) </p>
-		<p> Yerim Claudia Park (include contact info?)</p>
-	</div>
+      <div id="Team" style="font-family:Verdana;">
+        <br><br><br><br><br><br>
+        <table style="width:100%">
+          <tr> <font size="7">The Team</font></tr>
+          <tr>
+            <td style="width:400px">
+              <font size="5">Bernard Lim: </font>
+              Took 30 hours to get to UIUC from Singapore, but somehow turned 21. Best typeracer in the team.<br><br>
+              <img src="http://web.engr.illinois.edu/~blim7/bernard.jpg"/>
+            </td>
+            <td style="width:400px">
+              <font size="5">Shailpik Roy: </font>
+              I was born in England, lived in India for 14 years and now live in America. I know 4 languages : English, Bengali, Hindi and Spanish. I am aweeeesome.
+              <img src="http://web.engr.illinois.edu/~blim7/shailpik.jpg"/>
+            </td>
+            <td style="width:400px">
+              <font size="5">Yerim Claudia Park:</font>
+              Korean. 19. Missing the Californian sunshine. Most normal person among the 3.<br><br>
+              <img src="http://web.engr.illinois.edu/~blim7/claudia2.jpg"/>
+            </td>
+      </div>
+    </td>
+  </tr>
+</table>
 </body>
 </html>
